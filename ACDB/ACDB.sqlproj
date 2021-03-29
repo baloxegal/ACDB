@@ -144,5 +144,9 @@
       <AnsiNulls>On</AnsiNulls>
       <QuotedIdentifier>On</QuotedIdentifier>
     </Build>
+    <None Include="Script1.sql" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Script3.sql" />
   </ItemGroup>
 </Project>
