@@ -1,5 +1,9 @@
 ﻿use Homework
 
+select count(*) as customers_number from customers
+
+select sum(packages.monthly_payment - customers.monthly_discount) as customers_number from customers join packages on customers.pack_id = packages.pack_id
+
 alter table performance
 add constraint fk_course foreign key (course) references course(id)
 

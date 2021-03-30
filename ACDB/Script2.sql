@@ -38,3 +38,6 @@ right join packages on customers.pack_id = packages.pack_id order by customers.F
 /*4d*/
 select customers.First_Name, customers.Last_Name, packages.speed, packages.monthly_payment from customers
 full join packages on customers.pack_id = packages.pack_id order by packages.monthly_payment
+
+
+select sum(packages.monthly_payment - customers.monthly_discount) as customers_payments from customers join packages on customers.pack_id = packages.pack_id
