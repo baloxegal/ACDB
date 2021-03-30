@@ -147,6 +147,6 @@
     <None Include="Script1.sql" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Script3.sql" />
+    <None Include="Script2.sql" />
   </ItemGroup>
 </Project>
