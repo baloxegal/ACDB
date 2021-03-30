@@ -37,7 +37,16 @@ right join packages on customers.pack_id = packages.pack_id order by customers.F
 
 /*4d*/
 select customers.First_Name, customers.Last_Name, packages.speed, packages.monthly_payment from customers
-full join packages on customers.pack_id = packages.pack_id order by packages.monthly_payment
+full join packages on customers.pack_id = packages.pack_id where customers.First_Name like '%[37]' order by packages.monthly_payment
+/*********************************************************************************************************/
 
+select count(*) as customers_number from customers
 
 select sum(packages.monthly_payment - customers.monthly_discount) as customers_payments from customers join packages on customers.pack_id = packages.pack_id
+
+select packages.pack_id, count(*) as number_contracts, sum(packages.monthly_payment) as monthly_payment
+from customers join packages on customers.pack_id = packages.pack_id
+group by packages.pack_id
+
+select packages.pack_id, customers.First_Name from packages
+left join customers on packages.pack_id = customers.pack_id where customers.pack_id is null

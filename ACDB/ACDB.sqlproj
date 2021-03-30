@@ -148,5 +148,6 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Script2.sql" />
+    <None Include="Script3.sql" />
   </ItemGroup>
 </Project>
